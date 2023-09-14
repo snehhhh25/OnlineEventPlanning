@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotation Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+             /* Add your background image URL here */
+            background-image: url('https://media.istockphoto.com/id/1224300127/vector/numbers-curve-flow.jpg?s=612x612&w=0&k=20&c=Xk_U_-vXTYrAHRwDqpyJLDKIYcbbX-naZBPnFvOM3H0='); /* Add your background image URL here */
+            background-size: cover;
+            background-position: center;
+            background-repeat: repeat;
+            background-attachment: fixed;
+            color: #ffffff
+        }
+
+        .number-scroll {
+            font-size: 4rem;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: scroll 5s infinite linear;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(-50%) translateY(0);
+            }
+            100% {
+                transform: translateX(-50%) translateY(-100%);
+            }
+        }
+
+        .quotation-form {
+            max-width: 400px;
+            margin: 0 auto;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        .quotation-input {
+            margin-bottom: 10px;
+            width: calc(100% - 16px);
+            padding: 8px;
+            box-sizing: border-box;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.3);
+            color: #ffffff;
+        }
+
+        .quotation-input::placeholder {
+            color: #ffffff;
+        }
+
+        .quotation-button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .quotation-button:hover {
+            background-color: #0056b3;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Quotation Page</h1>
+
+    <div class="quotation-form">
+        <h2>Basic Package</h2>
+        <form action="#" id="basicForm">
+            <label for="basicAmount">Amount:</label>
+            <input type="text" id="basicAmount" name="basicAmount" class="quotation-input" placeholder="Enter amount" required><br>
+
+            <input type="submit" value="Submit Quotation" class="quotation-button">
+        </form>
+    </div>
+
+    <div class="quotation-form">
+        <h2>Premium Package</h2>
+        <form action="#" id="premiumForm">
+            <label for="premiumAmount">Amount:</label>
+            <input type="text" id="premiumAmount" name="premiumAmount" class="quotation-input" placeholder="Enter amount" required><br>
+
+            <input type="submit" value="Submit Quotation" class="quotation-button">
+        </form>
+    </div>
+
+    <div class="quotation-form">
+        <h2>Classic Package</h2>
+        <form action="#" id="classicForm">
+            <label for="classicAmount">Amount:</label>
+            <input type="text" id="classicAmount" name="classicAmount" class="quotation-input" placeholder="Enter amount" required><br>
+
+            <input type="submit" value="Submit Quotation" class="quotation-button">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('basicForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var basicAmount = document.getElementById('basicAmount').value;
+            alert('Quotation for Basic Package: $' + basicAmount);
+        });
+
+        document.getElementById('premiumForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var premiumAmount = document.getElementById('premiumAmount').value;
+            alert('Quotation for Premium Package: $' + premiumAmount);
+        });
+
+        document.getElementById('classicForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var classicAmount = document.getElementById('classicAmount').value;
+            alert('Quotation for Classic Package: $' + classicAmount);
+        });
+
+
+        <div class="number-scroll">
+            0123456789
+        </div>
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Login</title>
+    <link rel="stylesheet" href="../css/stylesheet.css"> 
+    <script src="../scripts/VendorLoginValidation.js"></script>
+</head>
+<body>
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Vendor Login</title>
+      <link rel="stylesheet" href="../css/stylesheet.css"> 
+      <script src="../scripts/VendorLoginValidation.js"></script>
+  </head>
+  <body>
+  
+      <div class="login-box">
+          <h2>Welcome Vendor, Login Here</h2>
+          <form onsubmit="return validateLoginForm()">
+            <div class="user-box">
+              <label for="vendorID">Vendor ID</label>
+              <br>
+              <input type="text" id="vendorID" name="vendorID" placeholder="Enter your vendor ID here" required="required">
+            </div>
+            <div class="user-box">
+              <label for="password">Password</label>
+              <br>
+              <input type="password" id="password" name="password" placeholder="Enter your password here" required="required">
+            </div>
+            <button type="submit">Submit</button>
+            <p id="error-message" class="error-message"></p>
+          </form>
+        </div>
+      
+  </body>
+  </html>
+  
+    
+</body>
+</html>

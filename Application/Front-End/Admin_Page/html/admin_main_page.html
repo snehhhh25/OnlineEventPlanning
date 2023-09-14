@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            padding: 8px 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .add-vendor, .activate, .deactivate {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .view-vendor, .view-registrations {
+            background-color: #008CBA;
+            color: white;
+        }
+
+        .table-container {
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .button-container button {
+            margin: 0 5px;
+        }
+
+        .button-container button.activate {
+            background-color: #2196F3;
+            text-align:center;
+        }
+
+        .button-container button.deactivate {
+            background-color: #F44336;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome Admin</h1>
+
+    <div class="button-container">
+        <div class="button add-vendor"><a href="Add_Vendor.html">Add Vendor</a></div><br>
+        
+
+    </div>
+
+    <h2>Vendors</h2>
+    <div class="button view-vendor" id="viewVendor">View Vendor</div>
+
+    <div class="table-container" id="vendorTable" style="display:none;">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- vendor details -->
+                <tr>
+                    <td>Vendor 1</td>
+                    <td>vendor1@example.com</td>
+                    <td>6666666666</td>
+                </tr>
+                <tr>
+                    <td>Vendor 2</td>
+                    <td>vendor2@example.com</td>
+                    <td>9999999999</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+
+    <h2>User Registrations</h2>
+
+    <div class="button view-registrations" id="viewRegistrations">View Registrations</div>
+
+    <div class="table-container" id="registrationsTable" style="display:none;">
+        <table>
+            <thead>
+                <!-- User details -->
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <br><br><th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>User 1</td>
+                    <td>user1@example.com</td>
+                    
+                    <td class="button-container">
+                        <button class="button deactivate" onclick="deactivateUser('user1')">Deactivate</button>
+                        <button class="button activate" onclick="activateUser('user1')">Activate</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>User 2</td>
+                    <td>user2@example.com</td>
+                    
+                    <td class="button-container">
+                        <button class="button deactivate" onclick="deactivateUser('user2')">Deactivate</button>
+                        <button class="button activate" onclick="activateUser('user2')">Activate</button>
+                    </td>
+                </tr>
+              
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        document.getElementById('viewVendor').addEventListener('click', function() {
+            var table = document.getElementById('vendorTable');
+            table.style.display = table.style.display === 'none' ? 'block' : 'none';
+        });
+
+        document.getElementById('viewRegistrations').addEventListener('click', function() {
+            var table = document.getElementById('registrationsTable');
+            table.style.display = table.style.display === 'none' ? 'block' : 'none';
+        });
+
+        function deactivateUser(userName) {
+            
+            alert('Deactivated user: ' + userName);
+        }
+
+        function activateUser(userName) {
+          
+            alert('Activated user: ' + userName);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>User Home Page</title>
+</head>
+<body>
+    <header>
+        <h1>HELLO DEAR USER, WARM WELCOME⭐</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" id="viewProfileLink">VIEW PROFILE</a></li>
+            <li><a href="changepassword.html" id="changePasswordLink">CHANGE PASSWORD</a></li>
+            <li><a href="#" id="sendPlanRequestLink">SEND PLAN REQUEST</a></li>
+            <li><a href="/UserLogin/View_Quotation/index.html" href="#" id="viewQuotationsLink">VIEW QUOTATIONS</a></li>
+        </ul>
+    </nav>
+    <section id="content">
+       
+    </section>
+    <script src="script.js"></script>
+   
+<div id="changePasswordForm" style="display: none;">
+    <h2>Change Password</h2>
+    <form>
+        <div class="input-box">
+            <label for="newPassword">New Password</label>
+            <input type="password" id="newPassword" placeholder="Enter new password" required />
+        </div>
+        <div class="input-box">
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" placeholder="Confirm new password" required />
+        </div>
+        <button id="changePasswordButton">Change Password</button>
+    </form>
+</div>
+<!-- Add a div for displaying success/error messages -->
+<div id="messageBox" style="display: none;"></div>
+
+    
+</body>
+</html>
